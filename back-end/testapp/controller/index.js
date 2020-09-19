@@ -20,6 +20,5 @@ const postTestAPI = (req, res) => {
 module.exports = {
   basicAPI: basicAPI,
   testAPI: testAPI,
-  postTestAPI,
-  postTestAPI,
+  postTestAPI: postTestAPI,
 };

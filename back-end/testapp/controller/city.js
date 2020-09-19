@@ -6,6 +6,8 @@ var parseString = require("xml2js").parseString;
 
 let cityData = "";
 
+let getCity = (req, res) => {};
+
 var url =
   "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
 var queryParams =
@@ -32,17 +34,15 @@ request(
     url: url + queryParams,
     method: "GET",
   },
-  // function (error, response, body) {
-  //   console.log("Status", response.statusCode);
-  //   //console.log('Headers', JSON.stringify(response.headers));
-  //   //console.log('Reponse received', body);
-  // }
   (getCity = (error, response, body) => {
     // console.log("Status", response.statusCode);
     // console.log("Headers", JSON.stringify(response.headers));
     // console.log("Reponse received", body);
 
+    // console.log("asdfdf");
+
     parseString(body, function (err, result) {
+      // console.log(result);
       cityData = result.response.body[0].items[0];
     });
 
@@ -51,5 +51,5 @@ request(
 );
 
 module.exports = {
-  getCity: this.getCity,
+  getCity: getCity,
 };
