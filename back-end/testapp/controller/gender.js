@@ -1,6 +1,7 @@
 const { api_key } = require("../config/config.json");
 
 var request = require("request");
+var parseString = require("xml2js").parseString;
 
 var url =
   "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19GenAgeCaseInfJson";

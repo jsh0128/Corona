@@ -1,6 +1,8 @@
 const { api_key } = require("../config/config.json");
 
 var request = require("request");
+const { map } = require("../app");
+var parseString = require("xml2js").parseString;
 
 var url =
   "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
@@ -28,9 +30,25 @@ request(
     url: url + queryParams,
     method: "GET",
   },
-  function (error, response, body) {
-    console.log("Status", response.statusCode);
-    console.log("Headers", JSON.stringify(response.headers));
-    console.log("Reponse received", body);
-  }
+  // function (error, response, body) {
+  //   console.log("Status", response.statusCode);
+  //   //console.log('Headers', JSON.stringify(response.headers));
+  //   //console.log('Reponse received', body);
+  // }
+  (getCity = (error, response, body) => {
+    // console.log("Status", response.statusCode);
+    // console.log("Headers", JSON.stringify(response.headers));
+    // console.log("Reponse received", body);
+
+    const adsf = parseString(body, function (err, result) {
+      result.response.body[0].items[0];
+    });
+    console.log(adsf);
+
+    // message:
+  })
 );
+
+module.exports = {
+  getCity: this.getCity,
+};
