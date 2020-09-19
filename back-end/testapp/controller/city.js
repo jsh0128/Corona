@@ -4,6 +4,8 @@ var request = require("request");
 const { map } = require("../app");
 var parseString = require("xml2js").parseString;
 
+var asdf;
+
 var url =
   "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
 var queryParams =
@@ -40,8 +42,8 @@ request(
     // console.log("Headers", JSON.stringify(response.headers));
     // console.log("Reponse received", body);
 
-    const adsf = parseString(body, function (err, result) {
-      result.response.body[0].items[0];
+    parseString(body, function (err, result) {
+      const asdf = result.response.body[0].items[0];
     });
     console.log(adsf);
 
