@@ -4,7 +4,7 @@ var request = require("request");
 const { map } = require("../app");
 var parseString = require("xml2js").parseString;
 
-var asdf;
+let cityData = "";
 
 var url =
   "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
@@ -43,11 +43,10 @@ request(
     // console.log("Reponse received", body);
 
     parseString(body, function (err, result) {
-      const asdf = result.response.body[0].items[0];
+      cityData = result.response.body[0].items[0];
     });
-    console.log(adsf);
 
-    // message:
+    message: cityData;
   })
 );
 
