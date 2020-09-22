@@ -32,13 +32,10 @@ const getGender = (req, res) => {
     "=" +
     encodeURIComponent("20200414"); /* */
 
-  request(
-    {
-      url: url + queryParams,
-      method: "GET",
-    },
-    function (error, response, body) {}
-  );
+  request({
+    url: url + queryParams,
+    method: "GET",
+  });
   url = url + queryParams;
 
   request.get(url, (err, response, body) => {
