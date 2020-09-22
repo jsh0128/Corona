@@ -4,7 +4,7 @@ const convert = require("xml-js");
 const request = require("request");
 
 const { map } = require("../app");
-var parseString = require("xml2js").parseString;
+// var parseString = require("xml2js").parseString;
 
 const getCity = (req, res) => {
   var url =
@@ -45,8 +45,11 @@ const getCity = (req, res) => {
         // console.log(`body data => ${result}`);
 
         var xmlToJson = convert.xml2json(result);
+        var data = JSON.parse(xmlToJson);
+
         res.status(200).json({
-          message: xmlToJson,
+          // message: xmlToJson,
+          data,
         });
         // console.log(`xml to json => ${xmlToJson}`);
       }
