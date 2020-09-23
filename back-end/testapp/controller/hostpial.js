@@ -4,7 +4,6 @@ const convert = require("xml-js");
 const request = require("request");
 
 const { map } = require("../app");
-// var parseString = require("xml2js").parseString;
 
 const getHostipal = (req, res) => {
   var request = require("request");
@@ -39,16 +38,13 @@ const getHostipal = (req, res) => {
     } else {
       if (response.statusCode == 200) {
         var result = body;
-        // console.log(`body data => ${result}`);
 
         var xmlToJson = convert.xml2json(result);
         var data = JSON.parse(xmlToJson);
 
         res.status(200).json({
-          // message: xmlToJson,
           data,
         });
-        // console.log(`xml to json => ${xmlToJson}`);
       }
     }
   });
