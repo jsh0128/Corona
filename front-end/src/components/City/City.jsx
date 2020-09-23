@@ -2,16 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./City.scss";
 
-const City = ({}) => {
+const City = ({ getApi }) => {
   return (
     <>
-      <div></div>
+      <div>
+        <button
+          onClick={() => {
+            getApi();
+          }}
+        >
+          asdfaf
+        </button>
+        <span>adfadf</span>
+      </div>
     </>
   );
 };
 
-City.propTypes = {
-
-};
+City.propTypes = {};
 
 export default City;
