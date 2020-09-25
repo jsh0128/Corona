@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import City from "components/City";
-import GetApi from "../../assets/api/GetApi";
+// import GetApi from "../../assets/api/GetApi";
 import axios from "axios";
 // import axios from "axios";
 
@@ -9,7 +9,7 @@ const CityContainer = () => {
     // const cityData = GetApi.getCity();
     // console.log(cityData);
     // console.log(adfafd);
-    const data = await axios.get(`http://localhost:3000/getCity`);
+    const data = await axios.get(`http://localhost:3001/getCity`);
     console.log(data);
     return data;
   };
