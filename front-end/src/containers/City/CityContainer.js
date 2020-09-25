@@ -9,8 +9,10 @@ const CityContainer = () => {
     // const cityData = GetApi.getCity();
     // console.log(cityData);
     // console.log(adfafd);
-    const data = await axios.get(`http://localhost:3001/getCity`);
-    console.log(data);
+    const {
+      data: { data },
+    } = await axios.get(`http://localhost:3001/getCity`);
+    console.log(data.elements[0].elements[1].elements[0]);
     return data;
   };
   useEffect(() => {
