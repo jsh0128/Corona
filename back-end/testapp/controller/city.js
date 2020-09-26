@@ -4,13 +4,25 @@ const convert = require("xml-js");
 const request = require("request");
 
 const { map } = require("../app");
-var now = Date();
 
-// console.log(now)
-console.log(now);
 const getCity = (req, res) => {
-  var now = Date();
-  console.log(now);
+  var now = new Date();
+
+  let year = now.getFullYear();
+  let month = now.getMonth();
+  let date = now.getDate();
+  if (month < 10) {
+    month = "0" + (month + 1);
+    if (date < 10) {
+      date = "0" + date;
+    }
+  } else {
+    if (date < 10) {
+      date = "0" + date;
+    }
+  }
+  let time = year + month + date;
+
   var url =
     "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
   var queryParams =
@@ -36,7 +48,7 @@ const getCity = (req, res) => {
     "&" +
     encodeURIComponent("endCreateDt") +
     "=" +
-    encodeURIComponent("20200410"); /* */
+    encodeURIComponent(time); /* */
 
   url = url + queryParams;
 
