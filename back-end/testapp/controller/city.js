@@ -4,8 +4,13 @@ const convert = require("xml-js");
 const request = require("request");
 
 const { map } = require("../app");
+var now = Date();
 
+// console.log(now)
+console.log(now);
 const getCity = (req, res) => {
+  var now = Date();
+  console.log(now);
   var url =
     "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
   var queryParams =
