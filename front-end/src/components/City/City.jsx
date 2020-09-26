@@ -5,16 +5,7 @@ import "./City.scss";
 const City = ({ getApi }) => {
   return (
     <>
-      <div>
-        <button
-          onClick={() => {
-            getApi();
-          }}
-        >
-          asdfaf
-        </button>
-        <span>adfadf</span>
-      </div>
+      <div></div>
     </>
   );
 };
