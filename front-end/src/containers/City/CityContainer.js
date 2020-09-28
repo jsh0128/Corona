@@ -12,11 +12,21 @@ const CityContainer = () => {
     const {
       data: { data },
     } = await axios.get(`http://localhost:3001/getCity`);
-    console.log(data.elements[0].elements[1].elements[0]);
-    return data;
+    console.log();
+
+    return data.elements[0].elements[1].elements[0];
   };
   useEffect(() => {
-    getApi();
+    getApi().then(
+      (response) => {
+        response.map((data) => {
+          console.log(data);
+        });
+      }
+      // data.map((data) => {
+      //   console.log(data);
+      // })
+    );
   }, []);
   return (
     <div>

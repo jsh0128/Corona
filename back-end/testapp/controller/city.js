@@ -62,6 +62,7 @@ const getCity = (req, res) => {
         var data = JSON.parse(xmlToJson);
 
         res.status(200).json({
+          // data,
           data,
         });
       }
