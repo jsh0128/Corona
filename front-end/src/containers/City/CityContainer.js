@@ -17,16 +17,26 @@ const CityContainer = () => {
     return data.elements[0].elements[1].elements[0];
   };
   useEffect(() => {
-    getApi().then(
-      (response) => {
-        response.map((data) => {
+    getApi().then((response) => {
+      // console.log(response);
+      console.log(response.elements[0]);
+      console.log(response.elements[0].elements[3].elements[0].text);
+      console.log(
+        response.elements.map((data) => {
+          console.log(data.elements[3].elements[0].text);
+        })
+      );
+
+      const abc = {
+        name: "ababa",
+        who: [1, 2, 3, 4],
+      };
+      console.log(
+        abc.who.map((data) => {
           console.log(data);
-        });
-      }
-      // data.map((data) => {
-      //   console.log(data);
-      // })
-    );
+        })
+      );
+    });
   }, []);
   return (
     <div>
