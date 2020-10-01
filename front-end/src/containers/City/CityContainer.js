@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import City from "components/City";
-// import GetApi from "../../assets/api/GetApi";
 import axios from "axios";
-// import axios from "axios";
 
 const CityContainer = () => {
   const getApi = async () => {
@@ -24,16 +22,6 @@ const CityContainer = () => {
       console.log(
         response.elements.map((data) => {
           console.log(data.elements[3].elements[0].text);
-        })
-      );
-
-      const abc = {
-        name: "ababa",
-        who: [1, 2, 3, 4],
-      };
-      console.log(
-        abc.who.map((data) => {
-          console.log(data);
         })
       );
     });
