@@ -1,16 +1,21 @@
 import axios from "axios";
-const GetApi = () => {
-  const getCity = async () => {
-    const data = await axios.get(`http://localhost:3000/getCity`);
+
+class GetApi {
+  async getCity() {
+    const {
+      data: { data },
+    } = await axios.get(`http://localhost:3001/getCity`);
     return data;
-  };
-  const getHostpial = async () => {
-    const data = await axios.get(`http://localhost:3000/getHostpial`);
+  }
+
+  async getHostpial() {
+    const data = await axios.get(`http://localhost:3001/getHostpial`);
     return data;
-  };
-  const getGender = async () => {
-    const data = await axios.get(`http://localhost:3000/getGender`);
+  }
+
+  async getGender() {
+    const data = await axios.get(`http://localhost:3001/getGender`);
     return data;
-  };
-};
-export default GetApi;
+  }
+}
+export default new GetApi();

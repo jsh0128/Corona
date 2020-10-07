@@ -9,10 +9,10 @@ const getCity = (req, res) => {
   var now = new Date();
 
   let year = now.getFullYear();
-  let month = now.getMonth();
+  let month = now.getMonth() + 1;
   let date = now.getDate();
   if (month < 10) {
-    month = "0" + (month + 1);
+    month = "0" + month;
     if (date < 10) {
       date = "0" + date;
     }
@@ -21,7 +21,8 @@ const getCity = (req, res) => {
       date = "0" + date;
     }
   }
-  let time = year + month + date;
+  let time = year + "" + month + date;
+  time = time - 0;
 
   var url =
     "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson";
@@ -62,8 +63,8 @@ const getCity = (req, res) => {
         var data = JSON.parse(xmlToJson);
 
         res.status(200).json({
-          // data,
           data,
+          // url,
         });
       }
     }
