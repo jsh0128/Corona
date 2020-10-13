@@ -5,6 +5,7 @@ const cityApi = require("../controller/city");
 const gender = require("../controller/gender");
 const hostpial = require("../controller/hostpial");
 
+
 router.get("/", userController.basicAPI);
 router.get("/test", userController.testAPI);
 router.get("/getCity", cityApi.getCity);

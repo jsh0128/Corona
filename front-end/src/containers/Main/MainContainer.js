@@ -6,7 +6,7 @@ const MainContainer = () => {
     <>
       <div />
     </>
-  );
+    );
 };
 
 export default inject("store")(observer(MainContainer));
