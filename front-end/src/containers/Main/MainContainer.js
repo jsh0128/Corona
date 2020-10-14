@@ -9,6 +9,7 @@ let newAll = {}
 let all = []
 
 const MainContainer = () => {
+  const [index, setIndex] = useState(0)
   const [corona, setCorona] = useState([])
 
   const getApi = async () => {
@@ -36,7 +37,7 @@ const MainContainer = () => {
     })
   }, [])
 
-  return <div>{corona.length >= 19 ? <City corona={corona} /> : <span>...Loading</span>}</div>
+  return <div>{corona.length >= 19 ? <City corona={corona} index={index} setIndex={setIndex} /> : <span>...Loading</span>}</div>
 }
 
 export default inject("store")(observer(MainContainer))
