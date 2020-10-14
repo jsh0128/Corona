@@ -1,12 +1,12 @@
-import React from "react";
-import MainContainer from "containers/Main/MainContainer";
+import React from "react"
+import MainContainer from "containers/Main/MainContainer"
 
-const ProfilePage = () => {
+const MainPage = () => {
   return (
     <>
       <MainContainer />
     </>
-  );
-};
+  )
+}
 
-export default ProfilePage;
+export default MainPage

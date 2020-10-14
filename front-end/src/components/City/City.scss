@@ -1,1 +1,99 @@
 /* your css code */
+.City{
+    width: 520px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 15px;
+    &_top{
+        &_select{
+            width:480px;
+            border: 1px solid #CCCCCC;
+            color: #B0B0B0;
+            font-size: large;
+            height: 40px;
+        }
+    }
+    &_text{
+        display: flex;
+        align-items: center;
+        background: #F6F6F6;
+        width: 300px;
+        height: 40px;
+        &_span{
+            padding-left: 15px;
+        }
+    }
+    &_bottom{
+    display: flex;
+    width: 480px;
+    justify-content: space-between;
+    &_check{
+        width: 150px;
+        height: 170px;
+        background: #C8DAFF;
+        border-radius: 3px;
+        
+        & div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 65%;
+        }
+        &_name{
+            padding-top: 10px;
+        }
+        &_person{
+            color:#4A68A5;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    }
+    &_death{
+        width: 150px;
+        height: 170px;
+        background: #FFC8C8;
+        border-radius: 3px;
+        & div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 65%;
+        }
+        &_name{
+            padding-top: 10px;
+        }
+        &_person{
+            color: #A14040;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    }
+    &_update{
+        width: 150px;
+        height: 170px;
+        background: #C8EBFF;
+        border-radius: 3px;    
+        & div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 65%;
+        }
+        &_name{
+            padding-top: 10px;
+        }
+        &_person{
+            color: #75ABCA;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    }
+}
+
+}
