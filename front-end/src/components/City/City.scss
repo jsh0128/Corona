@@ -38,10 +38,11 @@
     &_check{
         width: 150px;
         height: 170px;
-        background: #C8DAFF;
-        border-radius: 3px;
+        background-color: #C8DAFF;
+        border-radius: 10px;
         
         & div{
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -50,18 +51,28 @@
         }
         &_name{
             padding-top: 10px;
+            z-index: 3;
         }
         &_person{
             color:#4A68A5;
             font-size: xx-large;
             font-weight: bold;
+            z-index: 2;
+        }
+        &_img{
+            position: absolute;
+            top: -50%;
+            width: 100%;
+            height: 100%;
+            fill: #A2BEF6;
+            z-index: 1;
         }
     }
     &_death{
         width: 150px;
         height: 170px;
-        background: #FFC8C8;
-        border-radius: 3px;
+        background-color: #FFC8C8;
+        border-radius: 10px;
         & div{
             display: flex;
             flex-direction: column;
@@ -81,8 +92,8 @@
     &_update{
         width: 150px;
         height: 170px;
-        background: #C8EBFF;
-        border-radius: 3px;    
+        background-color: #C8EBFF;
+        border-radius: 10px;
         & div{
             display: flex;
             flex-direction: column;
