@@ -16,5 +16,9 @@
     "request": "^2.88.2",
     "xml-js": "^1.6.11",
     "xml2js": "^0.4.23"
-  }
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

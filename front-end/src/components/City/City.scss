@@ -1,115 +1,134 @@
 /* your css code */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
 }
-.City{
-    width: 520px;
-    height: 270px;
+.City {
+  width: 520px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 15px;
+  &_top {
+    &_select {
+      width: 480px;
+      border: 1px solid #cccccc;
+      color: #b0b0b0;
+      font-size: large;
+      height: 40px;
+    }
+  }
+  &_text {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid black;
-    padding: 15px;
-    &_top{
-        &_select{
-            width:480px;
-            border: 1px solid #CCCCCC;
-            color: #B0B0B0;
-            font-size: large;
-            height: 40px;
-        }
+    align-items: center;
+    background: #f6f6f6;
+    width: 300px;
+    height: 40px;
+    &_span {
+      padding-left: 15px;
+      font-size: small;
     }
-    &_text{
-        display: flex;
-        align-items: center;
-        background: #F6F6F6;
-        width: 300px;
-        height: 40px;
-        &_span{
-            padding-left: 15px;
-            font-size: small;
-        }
-    }
-    &_bottom{
+  }
+  &_bottom {
     display: flex;
     width: 480px;
     justify-content: space-between;
-    &_check{
-        width: 150px;
-        height: 170px;
-        background-color: #C8DAFF;
-        border-radius: 10px;
-        
-        & div{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 65%;
-        }
-        &_name{
-            padding-top: 10px;
-            z-index: 3;
-        }
-        &_person{
-            color:#4A68A5;
-            font-size: xx-large;
-            font-weight: bold;
-            z-index: 2;
-        }
-        &_img{
-            position: absolute;
-            top: -50%;
-            width: 100%;
-            height: 100%;
-            fill: #A2BEF6;
-            z-index: 1;
-        }
+    &_check {
+      position: relative;
+      width: 150px;
+      height: 170px;
+      background-color: #c8daff;
+      border-radius: 10px;
+      & div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 65%;
+      }
+      &_name {
+        padding-top: 10px;
+        z-index: 3;
+      }
+      &_person {
+        color: #4a68a5;
+        font-size: xx-large;
+        font-weight: bold;
+        z-index: 2;
+      }
+      &_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 9.4rem;
+        height: 9.4rem;
+        fill: #a2bef6;
+        z-index: 1;
+      }
     }
-    &_death{
-        width: 150px;
-        height: 170px;
-        background-color: #FFC8C8;
-        border-radius: 10px;
-        & div{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 65%;
-        }
-        &_name{
-            padding-top: 10px;
-        }
-        &_person{
-            color: #A14040;
-            font-size: xx-large;
-            font-weight: bold;
-        }
+    &_death {
+      position: relative;
+      width: 150px;
+      height: 170px;
+      background-color: #ffc8c8;
+      border-radius: 10px;
+      & div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 65%;
+      }
+      &_name {
+        padding-top: 10px;
+      }
+      &_person {
+        color: #a14040;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      &_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 9.4rem;
+        height: 9.4rem;
+        fill: #ffd5d5;
+        z-index: 1;
+      }
     }
-    &_update{
-        width: 150px;
-        height: 170px;
-        background-color: #C8EBFF;
-        border-radius: 10px;
-        & div{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 65%;
-        }
-        &_name{
-            padding-top: 10px;
-        }
-        &_person{
-            color: #75ABCA;
-            font-size: xx-large;
-            font-weight: bold;
-        }
+    &_update {
+      position: relative;
+      width: 150px;
+      height: 170px;
+      background-color: #c8ebff;
+      border-radius: 10px;
+      & div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 65%;
+      }
+      &_name {
+        padding-top: 10px;
+      }
+      &_person {
+        color: #75abca;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      &_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 9.4rem;
+        height: 9.4rem;
+        fill: #b7dcf1;
+        z-index: 1;
+      }
     }
-}
-
+  }
 }
