@@ -66,6 +66,7 @@
         height: 9.4rem;
         fill: #a2bef6;
         z-index: 1;
+        transform: translate(-50%, -50%);
       }
     }
     &_death {
@@ -82,21 +83,25 @@
         height: 65%;
       }
       &_name {
+        z-index: 3;
         padding-top: 10px;
       }
       &_person {
+        z-index: 2;
+
         color: #a14040;
         font-size: xx-large;
         font-weight: bold;
       }
       &_img {
         position: absolute;
-        top: 50%;
+        top: 58%;
         left: 50%;
         width: 9.4rem;
         height: 9.4rem;
         fill: #ffd5d5;
         z-index: 1;
+        transform: translate(-50%, -50%);
       }
     }
     &_update {
@@ -113,16 +118,19 @@
         height: 65%;
       }
       &_name {
+        z-index: 3;
         padding-top: 10px;
       }
       &_person {
+        z-index: 2;
         color: #75abca;
         font-size: xx-large;
         font-weight: bold;
       }
       &_img {
         position: absolute;
-        top: 50%;
+        transform: translate(-50%, -50%);
+        top: 66%;
         left: 50%;
         width: 9.4rem;
         height: 9.4rem;
