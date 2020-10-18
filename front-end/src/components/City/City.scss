@@ -3,8 +3,13 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .City {
-  width: 520px;
+  width: 480px;
   height: 270px;
   display: flex;
   flex-direction: column;
@@ -62,8 +67,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 9.4rem;
-        height: 9.4rem;
+        width: 150.4px;
+        height: 150.4px;
         fill: #a2bef6;
         z-index: 1;
         transform: translate(-50%, -50%);
@@ -97,8 +102,8 @@
         position: absolute;
         top: 58%;
         left: 50%;
-        width: 9.4rem;
-        height: 9.4rem;
+        width: 150.4px;
+        height: 150.4px;
         fill: #ffd5d5;
         z-index: 1;
         transform: translate(-50%, -50%);
@@ -132,8 +137,8 @@
         transform: translate(-50%, -50%);
         top: 66%;
         left: 50%;
-        width: 9.4rem;
-        height: 9.4rem;
+        width: 150.4px;
+        height: 150.4px;
         fill: #b7dcf1;
         z-index: 1;
       }
