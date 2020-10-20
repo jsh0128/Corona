@@ -9,7 +9,9 @@ class GetApi {
   }
 
   async getHostpial() {
-    const data = await axios.get(`http://localhost:3001/getHostpial`);
+    const { 
+      data: { data },
+   } = await axios.get(`http://localhost:3001/getHostpial`); 
     return data;
   }
 

@@ -5,12 +5,11 @@ import cities from "../../models/cities";
 import checked from "../../assets/images/free-icon-coronavirus.svg"
 
 const City = ({ corona, index, setIndex }) => {
-  
   return (
     <div className="center">
       <div className="City">
         <div className="City_top">
-          <select className="City_top_select"  onChange={(e) => setIndex(e.target.value)}>
+            <select className="City_top_select"  onChange={(e) => setIndex(e.target.value)}>
             {cities.map((city,i) => 
               <option value={i} key={i}>{city}</option>
             )}

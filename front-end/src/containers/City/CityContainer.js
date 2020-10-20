@@ -9,19 +9,6 @@ let newAll = {}
 let all = []
 
 const CityContainer = () => {
-  const [newInformation, setNewInformation] = useState({
-    area: "",
-    check: 0,
-    increase: 0,
-    death: 0,
-  })
-  const [idx, setIdx] = useState(0)
-  const [informatin, setInformation] = useState([])
-  const [area, setArea] = useState("")
-  const [check, setCheck] = useState(0)
-  const [increase, setIncrease] = useState(0)
-  const [death, setDeath] = useState(0)
-
   const getApi = async () => {
     const data = await GetApi.getCity()
     return data.elements[0].elements[1].elements[0]
@@ -37,8 +24,7 @@ const CityContainer = () => {
       }
       all = [...all, data]
     }
-    console.log(all)
-  }
+}
 
   useEffect(() => {
     getApi().then((response) => {

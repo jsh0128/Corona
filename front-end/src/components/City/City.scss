@@ -23,6 +23,7 @@
       color: #b0b0b0;
       font-size: large;
       height: 40px;
+      overflow: hidden;
     }
   }
   &_text {
@@ -93,14 +94,13 @@
       }
       &_person {
         z-index: 2;
-
         color: #a14040;
         font-size: xx-large;
         font-weight: bold;
       }
       &_img {
         position: absolute;
-        top: 58%;
+        top: 56%;
         left: 50%;
         width: 150.4px;
         height: 150.4px;
@@ -134,9 +134,9 @@
       }
       &_img {
         position: absolute;
-        transform: translate(-50%, -50%);
-        top: 66%;
+        top: 66.5%;
         left: 50%;
+        transform: translate(-50%, -50%);
         width: 150.4px;
         height: 150.4px;
         fill: #b7dcf1;

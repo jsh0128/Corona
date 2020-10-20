@@ -5,6 +5,23 @@ const convert = require("xml-js");
 var request = require("request");
 
 const getGender = (req, res) => {
+  var now = new Date();
+
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let date = now.getDate();
+  if (month < 10) {
+    month = "0" + month;
+    if (date < 10) {
+      date = "0" + date;
+    }
+  } else {
+    if (date < 10) {
+      date = "0" + date;
+    }
+  }
+  let time = year + "" + month + date;
+  time = time - 0;
   var url =
     "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19GenAgeCaseInfJson";
   var queryParams =
@@ -30,7 +47,7 @@ const getGender = (req, res) => {
     "&" +
     encodeURIComponent("endCreateDt") +
     "=" +
-    encodeURIComponent("20200414"); /* */
+    encodeURIComponent(time); /* */
 
   request({
     url: url + queryParams,
