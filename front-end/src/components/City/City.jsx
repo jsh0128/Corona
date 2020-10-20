@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./City.scss";
 import cities from "../../models/cities";
-import checked from "../../assets/images/free-icon-coronavirus.svg"
+import { useEffect } from "react";
 
-const City = ({ corona, index, setIndex }) => {
+const City = ({ corona, index, changeIndex }) => {
   return (
     <div className="center">
       <div className="City">
         <div className="City_top">
-            <select className="City_top_select"  onChange={(e) => setIndex(e.target.value)}>
+            <select className="City_top_select"  onChange={(e) => changeIndex(e.target.value)}>
             {cities.map((city,i) => 
               <option value={i} key={i}>{city}</option>
             )}
@@ -53,7 +53,5 @@ const City = ({ corona, index, setIndex }) => {
       </div>
   );
 };
-
-City.propTypes = {};
 
 export default City;
