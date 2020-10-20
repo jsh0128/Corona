@@ -4,6 +4,8 @@ import GetApi from "../../assets/api/GetApi"
 import axios from "axios"
 import City from "components/City/City"
 import "../../util/util.scss"
+import ReactLoading from 'react-loading';
+
 
 const CITY_COUNT = 19
 let newAll = {}
@@ -58,7 +60,7 @@ const MainContainer = () => {
       changeIndex={changeIndex}
       /> :
       <div className="loading">
-        <span className="loading_span">로딩중입니다..</span>
+            <ReactLoading type={"cubes"}color={"#5D9BFC"} height={'10%'} width={'10%'} />
       </div>
      }</div>
 }

@@ -2,7 +2,6 @@
 .loading {
   display: flex;
   justify-content: center;
-  &_span {
-    font-family: "Roboto", sans-serif;
-  }
+  align-items: center;
+  height: 200px;
 }
