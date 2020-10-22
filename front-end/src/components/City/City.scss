@@ -3,6 +3,10 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+.text {
+  display: flex;
+  justify-content: space-between;
+}
 .center {
   display: flex;
   justify-content: center;
@@ -10,7 +14,7 @@
 }
 .City {
   width: 480px;
-  height: 270px;
+  height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,11 +34,12 @@
     display: flex;
     align-items: center;
     background: #f6f6f6;
-    width: 300px;
-    height: 40px;
+    width: 200px;
+    height: 30px;
+    border-radius: 1px;
     &_span {
       padding-left: 15px;
-      font-size: small;
+      font-size: 11px;
     }
   }
   &_bottom {
@@ -68,8 +73,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 150.4px;
-        height: 150.4px;
+        width: 140px;
+        height: 140px;
         fill: #a2bef6;
         z-index: 1;
         transform: translate(-50%, -50%);

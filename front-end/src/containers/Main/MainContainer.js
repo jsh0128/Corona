@@ -18,7 +18,6 @@ const MainContainer = () => {
   const changeIndex = useCallback((e) => {
     if (e === "0") {
       setIndex(18);
-      console.log("전체입니다")
     }
     else if (e === "18") {
       setIndex(0);
@@ -44,7 +43,6 @@ const MainContainer = () => {
       all = [...all, data]
       setCorona(all)
     }
-    console.log(all)
   }
 
   useEffect(() => {
