@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./Gender.scss"
+import gender from "../../models/gender"
 import Buttonrouter from "components/common/Buttonrouter/Buttonrouter"
 import AnimatedProgressProvider from "../common/AnimatedProgressProvider "
 import { easeQuadInOut } from "d3-ease"
@@ -19,7 +20,11 @@ const Gender = ({ coronaGender }) => {
           </div>
           <div className="Gender-select">
             <select>
-              <option>연령/성별 선택</option>
+              {gender.map((order, i) => (
+                <option value={i} key={i}>
+                  {order}
+                </option>
+              ))}
             </select>
             <Buttonrouter />
           </div>
