@@ -26,6 +26,9 @@
     overflow: hidden;
     &-span {
       padding-left: 15px;
+      &-bold {
+        font-weight: bold;
+      }
     }
   }
   &-select {
@@ -44,7 +47,7 @@
         width: 140px;
         height: 170px;
         background: white;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.151);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
         border-radius: 7px;
       }
     }

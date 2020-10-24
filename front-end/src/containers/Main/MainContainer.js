@@ -4,8 +4,7 @@ import GetApi from "../../assets/api/GetApi"
 import axios from "axios"
 import City from "components/City/City"
 import "../../util/util.scss"
-import ReactLoading from 'react-loading';
-
+import ReactLoading from "react-loading"
 
 const CITY_COUNT = 19
 let newAll = {}
@@ -17,13 +16,11 @@ const MainContainer = () => {
 
   const changeIndex = useCallback((e) => {
     if (e === "0") {
-      setIndex(18);
-    }
-    else if (e === "18") {
-      setIndex(0);
-    }
-    else{
-      setIndex(e);
+      setIndex(18)
+    } else if (e === "18") {
+      setIndex(0)
+    } else {
+      setIndex(e)
     }
   })
 
@@ -32,7 +29,7 @@ const MainContainer = () => {
     return data.elements[0].elements[1].elements[0]
   }
 
-  const cityInformation = (response) => {
+  const cityInformation = useCallback((response) => {
     for (let i = 0; i < 19; i++) {
       let data = {
         area: response.elements[i].elements[3].elements[0].text,
@@ -43,26 +40,30 @@ const MainContainer = () => {
       all = [...all, data]
       setCorona(all)
     }
-  }
+  }, [])
 
   useEffect(() => {
     getApi().then((response) => {
       cityInformation(response)
     })
   }, [])
-  
 
-  return <div>{corona.length >= 19 ?
-     <City corona={corona}
-      index={index} 
-      changeIndex={changeIndex}
-      /> :
-      <div className="loading">
-            <ReactLoading type={"cubes"}color={"#5D9BFC"} height={'10%'} width={'10%'} />
-      </div>
-     }</div>
+  return (
+    <div>
+      {corona.length >= 19 ? (
+        <City corona={corona} index={index} changeIndex={changeIndex} />
+      ) : (
+        <div className="loading">
+          <ReactLoading
+            type={"cubes"}
+            color={"#5D9BFC"}
+            height={"10%"}
+            width={"10%"}
+          />
+        </div>
+      )}
+    </div>
+  )
 }
-
-
 
 export default inject("store")(observer(MainContainer))

@@ -1,33 +1,33 @@
-import React from "react";
-import { Animate } from "react-move";
+import React from "react"
+import { Animate } from "react-move"
 
 class AnimatedProgressProvider extends React.Component {
-  interval = undefined;
+  interval = undefined
 
   state = {
     isAnimated: false,
-  };
+  }
 
   static defaultProps = {
     valueStart: 0,
-  };
+  }
 
   componentDidMount() {
     if (this.props.repeat) {
       this.interval = window.setInterval(() => {
         this.setState({
           isAnimated: !this.state.isAnimated,
-        });
-      }, this.props.duration * 1000);
+        })
+      }, this.props.duration * 1000)
     } else {
       this.setState({
         isAnimated: !this.state.isAnimated,
-      });
+      })
     }
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.interval);
+    window.clearInterval(this.interval)
   }
 
   render() {
@@ -48,8 +48,8 @@ class AnimatedProgressProvider extends React.Component {
       >
         {({ value }) => this.props.children(value)}
       </Animate>
-    );
+    )
   }
 }
 
-export default AnimatedProgressProvider;
+export default AnimatedProgressProvider

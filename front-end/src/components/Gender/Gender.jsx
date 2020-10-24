@@ -3,39 +3,60 @@ import PropTypes from "prop-types"
 import "./Gender.scss"
 import gender from "../../models/gender"
 import Buttonrouter from "components/common/Buttonrouter/Buttonrouter"
-import AnimatedProgressProvider from "../common/AnimatedProgressProvider "
 import { easeQuadInOut } from "d3-ease"
 import { CircularProgressbar } from "react-circular-progressbar"
-import ShowTotalCommit from "components/common/circle/ShowTotalCommit"
+import Circle from "components/common/circle/Circle"
 
-const Gender = ({ coronaGender }) => {
+const Gender = ({ coronaGender, order, setOrder }) => {
   return (
     <>
       <div className="center">
         <div className="Gender">
           <div className="Gender-text">
             <span className="Gender-text-span">
-              0~9세의 코로나 정보를 나타냅니다
+              {/* {order > 9 ? (
+                <span className="Gender-text-span-bold">
+                  {coronaGender[order].age}
+                </span>
+              ) : (
+                <span className="Gender-text-span-bold">
+                  {coronaGender[order].age}세
+                </span>
+              )} */}
+              <span className="Gender-text-span-bold">
+                {coronaGender[order].age}
+              </span>
+              의 코로나 정보를 나타냅니다
             </span>
           </div>
           <div className="Gender-select">
-            <select>
+            <select
+              onChange={(e) => {
+                setOrder(e.target.value)
+              }}
+            >
               {gender.map((order, i) => (
                 <option value={i} key={i}>
                   {order}
                 </option>
               ))}
             </select>
-            <Buttonrouter />
+            <Buttonrouter total={coronaGender[order].checkCount} />
           </div>
           <div className="Gender-bottom">
             <div className="Gender-bottom-circle">
-              <div></div>
+              <div>
+                <Circle />
+              </div>
               <div></div>
             </div>
             <div className="Gender-bottom-count">
-              <div className="Gender-bottom-count-check"></div>
-              <div className="Gender-bottom-count-death"></div>
+              <div className="Gender-bottom-count-check">
+                <span>{coronaGender[order].checkCount}</span>
+              </div>
+              <div className="Gender-bottom-count-death">
+                {coronaGender[order].deathCount}
+              </div>
             </div>
           </div>
         </div>
