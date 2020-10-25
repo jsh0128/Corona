@@ -41,14 +41,20 @@ const Gender = ({ coronaGender, order, setOrder }) => {
                 </option>
               ))}
             </select>
-            <Buttonrouter total={coronaGender[order].checkCount} />
+            <Buttonrouter />
           </div>
           <div className="Gender-bottom">
             <div className="Gender-bottom-circle">
-              <div>
-                <Circle />
-              </div>
-              <div></div>
+              <Circle
+                className="Gender-bottom-circle-check"
+                total={coronaGender[order].checkRate}
+                name={"확진률"}
+              />
+              <Circle
+                className="Gender-bottom-circle-check"
+                total={coronaGender[order].deathCount}
+                name={"사망률"}
+              />
             </div>
             <div className="Gender-bottom-count">
               <div className="Gender-bottom-count-check">
