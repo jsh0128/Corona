@@ -27,7 +27,6 @@ const GenderContainer = () => {
         deathRate: response.elements[i].elements[5].elements[0].text,
       }
       all = [...all, data]
-      console.log(all)
       setCoronaGender(all)
     }
   }, [])

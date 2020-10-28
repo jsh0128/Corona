@@ -14,17 +14,12 @@ const Gender = ({ coronaGender, order, setOrder }) => {
         <div className="Gender">
           <div className="Gender-text">
             <span className="Gender-text-span">
-              {/* {order > 9 ? (
-                <span className="Gender-text-span-bold">
-                  {coronaGender[order].age}
-                </span>
-              ) : (
-                <span className="Gender-text-span-bold">
-                  {coronaGender[order].age}세
-                </span>
-              )} */}
               <span className="Gender-text-span-bold">
-                {coronaGender[order].age}
+                {order >= 9 ? (
+                  <span>{coronaGender[order].age}</span>
+                ) : (
+                  <span>{coronaGender[order].age}세 </span>
+                )}
               </span>
               의 코로나 정보를 나타냅니다
             </span>
@@ -45,15 +40,34 @@ const Gender = ({ coronaGender, order, setOrder }) => {
           </div>
           <div className="Gender-bottom">
             <div className="Gender-bottom-circle">
+              {order >= 9 ? (
+                <Circle
+                  className="Gender-bottom-circle-check"
+                  total={coronaGender[order].checkRate}
+                  maxValue={100}
+                  name={"확진률"}
+                  pathColor={"#C8DAFF"}
+                  trailColor={"#93B6FF"}
+                  textColor={"#5E8AC8"}
+                />
+              ) : (
+                <Circle
+                  className="Gender-bottom-circle-check"
+                  total={coronaGender[order].checkRate}
+                  maxValue={25}
+                  name={"확진률"}
+                  pathColor={"#C8DAFF"}
+                  trailColor={"#93B6FF"}
+                  textColor={"#5E8AC8"}
+                />
+              )}
               <Circle
                 className="Gender-bottom-circle-check"
-                total={coronaGender[order].checkRate}
-                name={"확진률"}
-              />
-              <Circle
-                className="Gender-bottom-circle-check"
-                total={coronaGender[order].deathCount}
+                total={coronaGender[order].deathRate}
                 name={"사망률"}
+                pathColor={"#FFC8C8"}
+                trailColor={"#FFEFEF"}
+                textColor={"#A14040"}
               />
             </div>
             <div className="Gender-bottom-count">

@@ -1,23 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import AnimatedProgressProvider from "../AnimatedProgressProvider "
 import { easeQuadInOut } from "d3-ease"
 import { CircularProgressbar } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 
-const Circle = ({ total, name }) => {
+const Circle = ({
+  total,
+  maxValue,
+  name,
+  pathColor,
+  trailColor,
+  textColor,
+}) => {
   return (
     <>
       {total >= 0 && (
         <div className="ShowTotal">
-          {/* <div className="ShowTotal-Header"> */}
-          {/* <img src={barChart} alt={barChart} /> */}
-          {/* <p className="ShowTotal-Header-Title">전체 커밋 수</p> */}
-          {/* </div> */}
-          {/* <div className="ShowTotal-Header-ProgressBar"> */}
           <AnimatedProgressProvider
             valueStart={0}
             valueEnd={total}
-            duration={1.4}
+            duration={0.2}
             easingFunction={easeQuadInOut}
           >
             {(value) => {
@@ -25,8 +27,8 @@ const Circle = ({ total, name }) => {
               return (
                 <CircularProgressbar
                   value={roundedValue}
-                  maxValue={50}
-                  text={`${roundedValue}`}
+                  maxValue={maxValue}
+                  text={`${roundedValue}` + "%"}
                   strokeWidth={6}
                   styles={{
                     root: {
@@ -34,18 +36,18 @@ const Circle = ({ total, name }) => {
                       width: "6rem",
                     },
                     path: {
-                      stroke: "#191b1d",
+                      stroke: pathColor,
                       strokeLinecap: "butt",
                       transition: "none",
                     },
                     trail: {
-                      stroke: "#999A9B",
+                      stroke: trailColor,
                       strokeLinecap: "butt",
                     },
                     text: {
-                      fill: "#191b1d",
+                      fill: textColor,
                       fontSize: "16px",
-                      fontWeight: 500,
+                      fontWeight: 700,
                     },
                     background: {
                       fill: "#3e98c7",
@@ -55,7 +57,14 @@ const Circle = ({ total, name }) => {
               )
             }}
           </AnimatedProgressProvider>
-          <span>{name}</span>
+          <span
+            style={{
+              color: textColor,
+              fontWeight: "300",
+            }}
+          >
+            {name}
+          </span>
         </div>
         // </div>
       )}
