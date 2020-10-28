@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./Gender.scss"
+import "../../util/util.scss"
 import gender from "../../models/gender"
 import Buttonrouter from "components/common/Buttonrouter/Buttonrouter"
 import { easeQuadInOut } from "d3-ease"
@@ -71,11 +72,25 @@ const Gender = ({ coronaGender, order, setOrder }) => {
               />
             </div>
             <div className="Gender-bottom-count">
-              <div className="Gender-bottom-count-check">
-                <span>{coronaGender[order].checkCount}</span>
+              <div className="Gender-bottom-count-check bottom-div">
+                <div className="bottom-title">
+                  <span className="Gender-bottom-count-title">확진자 수</span>
+                </div>
+                <div className="bottom-count">
+                  <span className="Gender-bottom-count-count">
+                    {coronaGender[order].checkCount}
+                  </span>
+                </div>
               </div>
-              <div className="Gender-bottom-count-death">
-                {coronaGender[order].deathCount}
+              <div className="Gender-bottom-count-death bottom-div">
+                <div className="bottom-title">
+                  <span className="Gender-bottom-count-title">사망자 수</span>
+                </div>
+                <div className="bottom-count">
+                  <span className="Gender-bottom-count-count">
+                    {coronaGender[order].deathCount}
+                  </span>
+                </div>
               </div>
             </div>
           </div>

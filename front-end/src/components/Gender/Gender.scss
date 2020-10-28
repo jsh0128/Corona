@@ -71,6 +71,7 @@
         background: #c8daff;
         border-radius: 7px;
         margin-top: 5px;
+        color: #5e8ac8;
       }
       &-death {
         width: 160px;
@@ -78,7 +79,24 @@
         background: #ffc8c8;
         border-radius: 7px;
         margin-bottom: 5px;
+        color: #940d0d;
+      }
+
+      &-title {
+        font-weight: bold;
       }
     }
+  }
+}
+.bottom {
+  &-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-title {
+    display: flex;
+    justify-content: flex-start;
   }
 }

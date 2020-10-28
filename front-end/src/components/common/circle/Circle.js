@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import AnimatedProgressProvider from "../AnimatedProgressProvider "
+import "../../../util/util.scss"
 import { easeQuadInOut } from "d3-ease"
 import { CircularProgressbar } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
