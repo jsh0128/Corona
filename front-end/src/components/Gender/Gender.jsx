@@ -49,7 +49,7 @@ const Gender = ({ coronaGender, order, setOrder }) => {
                   name={"확진률"}
                   pathColor={"#C8DAFF"}
                   trailColor={"#93B6FF"}
-                  textColor={"#5E8AC8"}
+                  textColor={"#004cb8"}
                 />
               ) : (
                 <Circle
@@ -59,7 +59,7 @@ const Gender = ({ coronaGender, order, setOrder }) => {
                   name={"확진률"}
                   pathColor={"#C8DAFF"}
                   trailColor={"#93B6FF"}
-                  textColor={"#5E8AC8"}
+                  textColor={"#004cb8"}
                 />
               )}
               <Circle

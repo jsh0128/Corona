@@ -45,9 +45,9 @@ const GenderContainer = () => {
         <div className="loading">
           <ReactLoading
             type={"cubes"}
-            color={"#5D9BFC"}
+            color={"#004CB8"}
             height={"10%"}
-            width={"10%"}
+            width={"6%"}
           />
         </div>
       )}

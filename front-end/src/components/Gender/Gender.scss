@@ -71,7 +71,7 @@
         background: #c8daff;
         border-radius: 7px;
         margin-top: 5px;
-        color: #5e8ac8;
+        color: #004cb8;
       }
       &-death {
         width: 160px;
@@ -98,5 +98,11 @@
   &-title {
     display: flex;
     justify-content: flex-start;
+    font-size: 13px;
+    font-weight: 100;
+  }
+  &-count {
+    font-weight: bold;
+    font-size: 25px;
   }
 }
