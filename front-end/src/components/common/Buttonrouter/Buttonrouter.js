@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { withRouter } from "react-router-dom"
 import "./Buttonrouter.scss"
 
-let buttonClick = "onClick"
-let buttonNotClick = "notClick"
 const router = ({ history, main, gender, hostpial }) => {
   return (
     <div className="Button">

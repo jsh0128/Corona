@@ -1,9 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import "./City.scss"
 import ButtonRouter from "../common/Buttonrouter/Buttonrouter"
 import cities from "../../models/cities"
-import { useEffect } from "react"
 
 const City = ({ corona, index, changeIndex }) => {
   return (

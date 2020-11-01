@@ -9,5 +9,6 @@
   "browser_action": {
     "default_icon": "logo512.png",
     "default_popup": "index.html"
-  }
+  },
+  "content_security_policy": "script-src 'self' 'sha256-S67Jpom/+8z/oiH6WDqtqCEmV73FOCnhhEnO3dAa+o8='; object-src 'self'"
 }

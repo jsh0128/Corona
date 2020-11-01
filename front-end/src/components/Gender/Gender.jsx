@@ -1,11 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import "./Gender.scss"
 import "../../util/util.scss"
 import gender from "../../models/gender"
 import Buttonrouter from "components/common/Buttonrouter/Buttonrouter"
-import { easeQuadInOut } from "d3-ease"
-import { CircularProgressbar } from "react-circular-progressbar"
 import Circle from "components/common/circle/Circle"
 
 const Gender = ({ coronaGender, order, setOrder }) => {
@@ -104,6 +102,6 @@ const Gender = ({ coronaGender, order, setOrder }) => {
   )
 }
 
-Gender.propTypes = {}
+// Gender.propTypes = {}
 
 export default Gender

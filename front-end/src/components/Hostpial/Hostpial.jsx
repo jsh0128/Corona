@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./Hostpial.scss"
 
-const Hostpial = ({}) => {
+const Hostpial = () => {
   return (
     <>
       <div>
@@ -10,7 +10,7 @@ const Hostpial = ({}) => {
           <div className="Gender">
             <div className="Gender-text"></div>
             <div className="Gender-bottom">
-              <div className="Gender-bottom-circle"></div>[ ]
+              <div className="Gender-bottom-circle"></div>
               <div className="Gender-bottom-count">
                 <div className="Gender-bottom-count-check bottom-div">
                   <div className="bottom-title">

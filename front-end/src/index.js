@@ -1,18 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import App from "./components/App"
-import stores from "./stores"
 import { Provider } from "mobx-react"
 import { BrowserRouter } from "react-router-dom"
 import * as serviceWorker from "./serviceWorker"
 
 ReactDOM.render(
-  <Provider store={stores}>
+  <Provider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </Provider>,
-  document.getElementById("root"),
+  document.getElementById("root")
 )
 
 // If you want your app to work offline and load faster, you can change

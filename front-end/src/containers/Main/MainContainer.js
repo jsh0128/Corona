@@ -1,13 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react"
-import { inject, observer } from "mobx-react"
 import GetApi from "../../assets/api/GetApi"
-import axios from "axios"
 import City from "components/City/City"
 import "../../util/util.scss"
 import ReactLoading from "react-loading"
 
 const CITY_COUNT = 19
-let newAll = {}
 let all = []
 
 const MainContainer = () => {
@@ -30,7 +27,7 @@ const MainContainer = () => {
   }
 
   const cityInformation = useCallback((response) => {
-    for (let i = 0; i < 19; i++) {
+    for (let i = 0; i < CITY_COUNT; i++) {
       let data = {
         area: response.elements[i].elements[3].elements[0].text,
         check: response.elements[i].elements[2].elements[0].text,
@@ -66,4 +63,4 @@ const MainContainer = () => {
   )
 }
 
-export default inject("store")(observer(MainContainer))
+export default MainContainer
