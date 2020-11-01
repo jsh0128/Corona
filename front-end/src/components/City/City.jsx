@@ -27,7 +27,11 @@ const City = ({ corona, index, changeIndex }) => {
               {corona[index].area}의 코로나 정보를 표시합니다
             </span>
           </div>
-          <ButtonRouter />
+          <ButtonRouter
+            main={"onClick"}
+            gender={"notClick"}
+            hostpial={"notClick"}
+          />
         </div>
 
         <div className="City_bottom">

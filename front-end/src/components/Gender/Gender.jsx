@@ -37,7 +37,11 @@ const Gender = ({ coronaGender, order, setOrder }) => {
                 </option>
               ))}
             </select>
-            <Buttonrouter />
+            <Buttonrouter
+              main={"notClick"}
+              gender={"onClick"}
+              hostpial={"notClick"}
+            />
           </div>
           <div className="Gender-bottom">
             <div className="Gender-bottom-circle">
