@@ -1,35 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./Hostpial.scss"
+import Buttonrouter from "components/common/Buttonrouter/Buttonrouter"
 
 const Hostpial = () => {
   return (
     <>
       <div>
         <div className="center">
-          <div className="Gender">
-            <div className="Gender-text"></div>
-            <div className="Gender-bottom">
-              <div className="Gender-bottom-circle"></div>
-              <div className="Gender-bottom-count">
-                <div className="Gender-bottom-count-check bottom-div">
-                  <div className="bottom-title">
-                    <span className="Gender-bottom-count-title">확진자 수</span>
-                  </div>
-                  <div className="bottom-count">
-                    <span className="Gender-bottom-count-count"></span>
-                  </div>
-                </div>
-                <div className="Gender-bottom-count-death bottom-div">
-                  <div className="bottom-title">
-                    <span className="Gender-bottom-count-title">사망자 수</span>
-                  </div>
-                  <div className="bottom-count">
-                    <span className="Gender-bottom-count-count"></span>
-                  </div>
-                </div>
-              </div>
+          <div className="Hostpial">
+            <div className="Hostpial-text">af</div>
+            <div className="Hostpial-select">
+              <select>
+                <option>ㅁㄴㅇㄹ</option>
+              </select>
+              <Buttonrouter
+                main={"notClick"}
+                gender={"notClick"}
+                hostpial={"onClick"}
+              />
             </div>
+            <div className="Hostpial-bottom"></div>
           </div>
         </div>
       </div>
