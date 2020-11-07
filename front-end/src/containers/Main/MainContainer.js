@@ -11,6 +11,7 @@ const MainContainer = () => {
   const [index, setIndex] = useState(18)
   const [corona, setCorona] = useState([])
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const changeIndex = useCallback((e) => {
     if (e === "0") {
       setIndex(18)
@@ -23,24 +24,25 @@ const MainContainer = () => {
 
   const getApi = async () => {
     const data = await GetApi.getCity()
-    return data.elements[0].elements[1].elements[0]
+    return data.response.body.items
   }
 
   const cityInformation = useCallback((response) => {
     for (let i = 0; i < CITY_COUNT; i++) {
       let data = {
-        area: response.elements[i].elements[3].elements[0].text,
-        check: response.elements[i].elements[2].elements[0].text,
-        update: response.elements[i].elements[6].elements[0].text,
-        death: response.elements[i].elements[1].elements[0].text,
+        area: response.item[i].gubun,
+        check: response.item[i].defCnt,
+        update: response.item[i].incDec,
+        death: response.item[i].deathCnt,
       }
       all = [...all, data]
       setCorona(all)
     }
   }, [])
-
+  console.log(corona)
   useEffect(() => {
     getApi().then((response) => {
+      console.log(response)
       cityInformation(response)
     })
   }, [])

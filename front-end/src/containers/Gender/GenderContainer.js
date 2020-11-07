@@ -12,19 +12,20 @@ let all = []
 const GenderContainer = () => {
   const [order, setOrder] = useState(0)
   const [coronaGender, setCoronaGender] = useState([])
+
   const getApi = async () => {
     const data = await GetApi.getGender()
-    return data.data.data.elements[0].elements[1].elements[0]
+    return data.data.data.response.body.items
   }
 
   const apiSet = useCallback((response) => {
     for (let i = 0; i < 11; i++) {
       let data = {
-        age: response.elements[i].elements[6].elements[0].text,
-        checkCount: response.elements[i].elements[0].elements[0].text,
-        checkRate: response.elements[i].elements[1].elements[0].text,
-        deathCount: response.elements[i].elements[4].elements[0].text,
-        deathRate: response.elements[i].elements[5].elements[0].text,
+        age: response.item[i].gubun, //gubun
+        checkCount: response.item[i].confCase, //confCase
+        checkRate: response.item[i].confCaseRate, //confCaseRate
+        deathCount: response.item[i].death, //death
+        deathRate: response.item[i].deathRate, //deathRate
       }
       all = [...all, data]
       setCoronaGender(all)
@@ -33,6 +34,7 @@ const GenderContainer = () => {
 
   useEffect(() => {
     getApi().then((response) => {
+      console.log(response)
       apiSet(response)
     })
   }, [])
