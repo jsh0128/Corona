@@ -12,7 +12,9 @@ const Hostpial = () => {
             <div className="Hostpial-text">af</div>
             <div className="Hostpial-select">
               <select>
-                <option>ㅁㄴㅇㄹ</option>
+                <option>국민 안심병원</option>
+                <option>국민 안심병원</option>
+                <option>국민 안심병원</option>
               </select>
               <Buttonrouter
                 main={"notClick"}

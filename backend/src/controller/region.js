@@ -11,19 +11,16 @@ module.exports = async (req, res) => {
 
   let formatedDate = formatYYYYMMDD(now)
 
-  try {
-    const response = await axios.get(
-      `${GET_REGION_URL}?ServiceKey=${api_key}`,
-      {
-        params: {
-          pageNo: 1,
-          numOfRows: 10,
-          startCreateDt: "20200410",
-          endCreateDt: formatedDate,
-        },
-      }
-    )
+  const body = {
+    pageNo: 1,
+    numOfRows: 10,
+    startCreateDt: "20200410",
+    endCreateDt: formatedDate,
+  }
+  const url = `${GET_REGION_URL}?ServiceKey=${api_key}`
 
+  try {
+    const response = await axios.get(url, body)
     const { data } = response
 
     res.status(200).json({

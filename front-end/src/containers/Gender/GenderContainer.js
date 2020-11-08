@@ -1,7 +1,6 @@
 import Gender from "components/Gender/Gender"
 import React, { useCallback, useEffect, useState } from "react"
 import GetApi from "../../assets/api/GetApi"
-import axios from "axios"
 import ReactLoading from "react-loading"
 import "../../util/util.scss"
 
@@ -15,6 +14,8 @@ const GenderContainer = () => {
 
   const getApi = async () => {
     const data = await GetApi.getGender()
+    console.log(data)
+    console.log(data.data.data.response)
     return data.data.data.response.body.items
   }
 
@@ -35,6 +36,7 @@ const GenderContainer = () => {
   useEffect(() => {
     getApi().then((response) => {
       console.log(response)
+      console.log("adf")
       apiSet(response)
     })
   }, [])
