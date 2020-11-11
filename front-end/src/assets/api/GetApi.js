@@ -2,21 +2,33 @@ import axios from "axios"
 
 class GetApi {
   async getCity() {
-    const {
-      data: { data },
-    } = await axios.get(`http://localhost:8080/region/infectee`)
-    return data
+    try {
+      const {
+        data: { data },
+      } = await axios.get(`http://localhost:8080/region/infectee`)
+      return data
+    } catch (error) {
+      throw new Error(`${error}`)
+    }
   }
 
   async getGender() {
-    const data = await axios.get(`http://localhost:8080/gender/infectee`)
-    return data
+    try {
+      const data = await axios.get(`http://localhost:8080/gender/infectee`)
+      return data
+    } catch (error) {
+      throw new Error(`${error}`)
+    }
   }
   async getHostpial() {
-    const {
-      data: { data },
-    } = await axios.get(`http://localhost:8080/hostpial`)
-    return data
+    try {
+      const {
+        data: { data },
+      } = await axios.get(`http://localhost:8080/hostpial`)
+      return data
+    } catch (error) {
+      throw new Error(`${error}`)
+    }
   }
 }
 export default new GetApi()
