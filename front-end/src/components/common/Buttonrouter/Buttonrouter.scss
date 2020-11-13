@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 220px;
+}
+.onClick {
+  color: white;
+  height: 30px;
+  width: 68px;
+  font-size: 10px;
+  border: none;
+  background: #5e8ac8;
+  border-radius: 20px;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.164);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: #5c8fd6;
+    color: whitesmoke;
+  }
+}
+.notClick {
+  color: #757575;
+  height: 30px;
+  width: 68px;
+  font-size: 9px;
+  border: 1px solid #c3c3c3;
+  background: none;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: #3d6bac;
+    color: whitesmoke;
+  }
+}
