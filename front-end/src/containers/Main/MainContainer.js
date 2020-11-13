@@ -23,7 +23,6 @@ const MainContainer = () => {
 
   const getApi = async () => {
     const data = await GetApi.getCity()
-    console.log(data.response.body.items)
     return data.response.body.items
   }
 
