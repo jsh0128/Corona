@@ -19,17 +19,13 @@ module.exports = async (req, res) => {
   console.log("asdf")
 
   try {
-    const response = await axios.get(
-      url,
-      body
-      //    {
-      //   params: {
-      //     pageNo: 1,
-      //     numOfRows: 10,
-      //     spclAdmTyCd: "A0",
-      //   },
-      // }
-    )
+    const response = await axios.get(url, {
+      params: {
+        pageNo: 1,
+        numOfRows: 1000,
+        spclAdmTyCd: "A0",
+      },
+    })
     const { data } = response
 
     res.status(200).json({
