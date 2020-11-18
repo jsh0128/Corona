@@ -11,7 +11,9 @@ const Hostpial = ({ api }) => {
           <div className="Hostpial">
             <div className="Hostpial-text">
               <span className="Hostpial-text-span">
-                <span className="Hostpial-text-span-count">10개의</span>
+                <span className="Hostpial-text-span-count">
+                  {api.length}개의{" "}
+                </span>
                 국민안심병원 정보를 나타냅니다
               </span>
             </div>
