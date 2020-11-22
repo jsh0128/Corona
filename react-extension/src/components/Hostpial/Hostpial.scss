@@ -1,0 +1,68 @@
+/* your css code */
+.center {
+  display: flex;
+  align-items: center;
+}
+.Hostpial {
+  display: flex;
+  width: 480px;
+  height: 260px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &-text {
+    display: flex;
+    align-items: center;
+    background: #f6f6f6;
+    color: black;
+    font-size: large;
+    height: 40px;
+    overflow: hidden;
+    &-span {
+      padding-left: 15px;
+      &-count {
+        font-weight: bold;
+      }
+    }
+  }
+  &-select {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+    color: black;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      background: white;
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #3d6bac;
+      border-radius: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: whitesmoke;
+      border-radius: 8px;
+    }
+    &-info {
+      display: flex;
+      border: 1px solid black;
+      justify-content: space-between;
+      &-tel {
+        width: 120px;
+      }
+      &-name {
+        width: 280px;
+      }
+    }
+  }
+}

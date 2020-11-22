@@ -18,13 +18,10 @@ module.exports = async (req, res) => {
   }
 
   const url = `${GET_GENDER_URL}?serviceKey=${api_key}`
-  console.log(url)
 
   try {
     const response = await axios.get(url, { params: params })
     const { data } = response
-
-    console.log(response)
 
     res.status(200).json({
       data,

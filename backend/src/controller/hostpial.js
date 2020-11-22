@@ -16,8 +16,6 @@ module.exports = async (req, res) => {
 
   const url = `${GET_HOSTPIAL_URL}?ServiceKey=${api_key}`
 
-  console.log("asdf")
-
   try {
     const response = await axios.get(url, {
       params: {
