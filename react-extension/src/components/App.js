@@ -9,8 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <GenderPage /> */}
-        <MainPage />
+        <GenderPage />
       </Router>
     </div>
   )

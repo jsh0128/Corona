@@ -1,7 +1,7 @@
 {
-  "name": "Getting Started Example",
+  "name": "오늘 기분 코로나 싫음.",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "코로나 확진자 수를 알려주는 확장프로그램입니다.",
   "manifest_version": 2,
   "browser_action": {
     "default_popup": "index.html",
