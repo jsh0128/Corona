@@ -23,7 +23,7 @@ const MainContainer = () => {
 
   const getApi = async () => {
     const data = await GetApi.getCity()
-
+    console.log(data)
     return data.response.body.items
   }
 

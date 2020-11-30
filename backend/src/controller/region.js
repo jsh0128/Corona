@@ -20,6 +20,7 @@ module.exports = async (req, res) => {
   const url = `${GET_REGION_URL}?ServiceKey=${city_api}`
 
   try {
+    console.log(url)
     const response = await axios.get(url, body)
     const { data } = response
 
