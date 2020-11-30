@@ -1,4 +1,4 @@
-const { api_key } = require("../../config/config.json")
+const { city_api } = require("../../config/config.json")
 const xmlToJsonConverter = require("xml-js")
 const axios = require("axios")
 const { formatYYYYMMDD } = require("../util/dateUtil")
@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     startCreateDt: "20200410",
     endCreateDt: formatedDate,
   }
-  const url = `${GET_REGION_URL}?ServiceKey=${api_key}`
+  const url = `${GET_REGION_URL}?ServiceKey=${city_api}`
 
   try {
     const response = await axios.get(url, body)

@@ -33,7 +33,6 @@ const City = ({ corona, index, changeIndex }) => {
             hostpial={"notClick"}
           />
         </div>
-
         <div className="City_bottom">
           <div className="City_bottom_check">
             <div>

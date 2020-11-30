@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px solid #888;
+        padding: 15px;
+      }
+    </style>
+    <script>
+      console.log(window)
+      console.log(window.navigator.userAgent)
+      console.log(window.location)
+      console.log(window.location.href)
+
+      console.log(window.history)
+
+      window.onload = function () {
+        showSize()
+      }
+      window.onresize = function () {
+        console.log("resize")
+        showSize()
+      }
+
+      function showSize() {
+        var width = window.outerWidth
+        var height = window.outerHeight
+
+        var str = "width : " + width
+        str += " -  height : " + height
+
+        document.querySelector("#txt_size").value = str
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="txt_size" />
+
+    <table>
+      <thead>
+        <tr>
+          <th>차종류</th>
+          <th>회사</th>
+          <th>가격</th>
+          <th>용도</th>
+          <th>출시년도</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>쏘나타</td>
+          <td>현대</td>
+          <td>2500</td>
+          <td>가족용</td>
+          <td>1995년</td>
+        </tr>
+        <tr>
+          <td>포터</td>
+          <td>현대</td>
+          <td>2000</td>
+          <td>사업용</td>
+          <td>1998년</td>
+        </tr>
+        <tr>
+          <td>마세라티</td>
+          <td>마세라티</td>
+          <td>7000</td>
+          <td>과시용</td>
+          <td>1980년</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

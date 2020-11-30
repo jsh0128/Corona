@@ -23,6 +23,7 @@ const MainContainer = () => {
 
   const getApi = async () => {
     const data = await GetApi.getCity()
+
     return data.response.body.items
   }
 
@@ -41,6 +42,7 @@ const MainContainer = () => {
 
   useEffect(() => {
     getApi().then((response) => {
+      console.log(response)
       cityInformation(response)
     })
   }, [])

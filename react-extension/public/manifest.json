@@ -8,5 +8,5 @@
     "default_title": "Open the popup"
   },
   "permissions": [],
-  "content_security_policy": "default-src 'self'; object-src 'none'; script-src 'self' 'sha256-ZNUQIr71/HOt8hXuUl/8QKUFUZ/bn+eIcSOTIRDVgnA='; style-src 'self' 'unsafe-inline';"
+  "content_security_policy": "default-src 'self'; object-src 'none'; script-src 'self' 'sha256-A/Iti39Ox/8oIs9L2ZFNP1AMAOVGk9uCOij2XIxco2g='; style-src 'self' 'unsafe-inline'; connect-src http://localhost:8080/region/infectee http://localhost:8080/gender/infectee http://localhost:8080/hostpial "
 }

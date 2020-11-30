@@ -2,6 +2,9 @@ import React from "react"
 import { withRouter } from "react-router-dom"
 import { goTo } from "react-chrome-extension-router"
 import "./Buttonrouter.scss"
+import MainPage from "../../../pages/MainPage"
+import GenderPage from "../../../pages/GenderPage"
+import HostpialPage from "../../../pages/HostpialPage"
 
 const router = ({ history, main, gender, hostpial }) => {
   return (
@@ -9,7 +12,7 @@ const router = ({ history, main, gender, hostpial }) => {
       <button
         className={main}
         onClick={() => {
-          goTo("/")
+          goTo(MainPage)
         }}
       >
         지역별
@@ -17,7 +20,7 @@ const router = ({ history, main, gender, hostpial }) => {
       <button
         className={gender}
         onClick={() => {
-          goTo("/gender")
+          goTo(GenderPage)
         }}
       >
         성별/나이
@@ -25,7 +28,7 @@ const router = ({ history, main, gender, hostpial }) => {
       <button
         className={hostpial}
         onClick={() => {
-          goTo("/hostpial")
+          goTo(HostpialPage)
         }}
       >
         코로나 병원
