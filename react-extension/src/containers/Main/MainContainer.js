@@ -4,7 +4,7 @@ import City from "../../components/City"
 import "../../util/util.scss"
 import ReactLoading from "react-loading"
 
-const CITY_COUNT = 20
+const CITY_COUNT = 19
 let all = []
 
 const MainContainer = () => {
@@ -27,7 +27,7 @@ const MainContainer = () => {
   }
 
   const cityInformation = useCallback((response) => {
-    for (let i = 1; i < CITY_COUNT; i++) {
+    for (let i = 0; i < CITY_COUNT; i++) {
       let data = {
         area: response.item[i].gubun,
         check: response.item[i].defCnt,
@@ -41,6 +41,7 @@ const MainContainer = () => {
 
   useEffect(() => {
     getApi().then((response) => {
+      console.log(response)
       cityInformation(response)
       console.log(corona)
     })
