@@ -5,7 +5,7 @@ class GetApi {
     try {
       const {
         data: { data },
-      } = await axios.get(`http://localhost:8080/region/infectee`)
+      } = await axios.get(`http://13.58.35.118:8080/region/infectee`)
       return data
     } catch (error) {
       throw new Error(`${error}`)
