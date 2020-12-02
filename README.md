@@ -22,7 +22,5 @@ Visual Studio Code, Adobe Xd
 
 #### 기타 사항
 - [공공데이터 사용](https://www.data.go.kr/)
-<div>
-<img src="https://user-images.githubusercontent.com/52942411/100828632-e5390e00-34a2-11eb-9361-619b8cb4cbd2.png" width="49%" />
-<img src="https://user-images.githubusercontent.com/52942411/100828689-013caf80-34a3-11eb-9d31-4347833ceb75.jpg" width="49%" />
-</div>
+<img src="https://user-images.githubusercontent.com/52942411/100828632-e5390e00-34a2-11eb-9361-619b8cb4cbd2.png" width="20%" />
+<img src="https://user-images.githubusercontent.com/52942411/100828689-013caf80-34a3-11eb-9d31-4347833ceb75.jpg" width="20%" />
