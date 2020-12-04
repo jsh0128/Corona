@@ -15,6 +15,10 @@
 - 연령/나이 별로 확진자 수, 사망자 수, 확진율,사망률을 나타내줍니다.
 - 대한민국에 있는 국민안심병원의 정보를 알려줍니다.
 
+## 설치 주소
+- [웨일스토어](https://store.whale.naver.com/detail/mhckekopiffchnhkofoaldgdkobadajg)
+- [크롬확장프로그램](https://store.whale.naver.com/detail/mhckekopiffchnhkofoaldgdkobadajg)
+
 
 #### 개발 툴
 Visual Studio Code, Adobe Xd
