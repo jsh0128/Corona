@@ -41,9 +41,7 @@ const MainContainer = () => {
 
   useEffect(() => {
     getApi().then((response) => {
-      console.log(response)
       cityInformation(response)
-      console.log(corona)
     })
   }, [])
 

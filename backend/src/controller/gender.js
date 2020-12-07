@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
   const params = {
     pageNo: 1,
     numOfRows: 10,
-    startCreateDt: "20200310",
+    startCreateDt: formatedDate - 1,
     endCreateDt: formatedDate,
   }
 
