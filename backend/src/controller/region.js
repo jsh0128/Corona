@@ -25,9 +25,24 @@ module.exports = async (req, res) => {
     const response = await axios.get(url, { params: params })
     const { data } = response
 
-    res.status(200).json({
-      data,
-    })
+    let getCityData
+
+    if (data.response.body.items) {
+      let changeStringData = JSON.stringify(data)
+      fs.writeFileSync("city-api.json", changeStringData)
+    } else {
+      getCityData = JSON.parse(fs.readFileSync("city-api.json"))
+    }
+
+    if (data.response.body.items) {
+      res.status(200).json({
+        data,
+      })
+    } else {
+      res.status(200).json({
+        getCityData,
+      })
+    }
   } catch (err) {
     res.status(500).json({
       message: "서버 오류",
