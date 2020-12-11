@@ -28,19 +28,19 @@ module.exports = async (req, res) => {
     let getCityData
 
     if (data.response.body.items === "") {
+      getCityData = JSON.parse(fs.readFileSync("city-api.json"))
+    } else {
       let changeStringData = JSON.stringify(data)
       fs.writeFileSync("city-api.json", changeStringData)
-    } else {
-      getCityData = JSON.parse(fs.readFileSync("city-api.json"))
     }
 
-    if (data.response.body.items) {
+    if (data.response.body.items === "") {
       res.status(200).json({
-        data,
+        getCityData,
       })
     } else {
       res.status(200).json({
-        getCityData,
+        data,
       })
     }
   } catch (err) {
