@@ -19,6 +19,14 @@
 - [웨일스토어](https://store.whale.naver.com/detail/mhckekopiffchnhkofoaldgdkobadajg)
 - [크롬확장프로그램](https://store.whale.naver.com/detail/mhckekopiffchnhkofoaldgdkobadajg)
 
+## 개발 언어
+<div>
+<img src="https://user-images.githubusercontent.com/52942411/101300928-914f7000-387a-11eb-84a1-1f417e327864.jpg" width="40%" />
+<img src="https://user-images.githubusercontent.com/52942411/101300927-90b6d980-387a-11eb-9c6b-e1dbf2102216.png" width="32%" />
+<img src="https://user-images.githubusercontent.com/52942411/101300924-901e4300-387a-11eb-9268-9b75bc11a1be.png" width="23%" />
+</div>
+react.js , express(node.js), aws
+
 
 #### 개발 툴
 Visual Studio Code, Adobe Xd
