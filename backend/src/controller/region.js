@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
 
     let getCityData
 
-    if (data.response.body.items) {
+    if (data.response.body.items === "") {
       let changeStringData = JSON.stringify(data)
       fs.writeFileSync("city-api.json", changeStringData)
     } else {
