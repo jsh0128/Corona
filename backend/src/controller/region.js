@@ -28,6 +28,7 @@ module.exports = async (req, res) => {
     let getCityData
 
     if (data.response.body.items === "") {
+      console.log("asd")
       getCityData = JSON.parse(fs.readFileSync("city-api.json"))
     } else {
       let changeStringData = JSON.stringify(data)
@@ -36,7 +37,7 @@ module.exports = async (req, res) => {
 
     if (data.response.body.items === "") {
       res.status(200).json({
-        getCityData,
+        data: getCityData,
       })
     } else {
       res.status(200).json({
