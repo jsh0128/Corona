@@ -17,7 +17,7 @@
 
 ## 설치 주소
 - [웨일스토어](https://store.whale.naver.com/detail/mhckekopiffchnhkofoaldgdkobadajg)
-- [크롬확장프로그램](https://store.whale.naver.com/detail/mhckekopiffchnhkofoaldgdkobadajg)
+- [크롬확장프로그램](https://chrome.google.com/webstore/detail/%EC%BD%94%EB%A1%9C%EB%82%98-%EC%95%8C%EB%A6%AC%EB%AF%B8/okkjkifdnmkmcdnecdnlofifomlfpddl?hl=ko)
 
 ## 개발 언어
 <div>
