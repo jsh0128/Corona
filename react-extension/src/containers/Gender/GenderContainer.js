@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react"
 import Gender from "../../components/Gender"
 import GetApi from "../../assets/api/GetApi"
-import ReactLoading from "react-loading"
+import Skeleton from "react-loading-skeleton"
 import "../../util/util.scss"
 
 // 0~10번까지
@@ -14,8 +14,6 @@ const GenderContainer = () => {
 
   const getApi = async () => {
     const data = await GetApi.getGender()
-    console.log(data)
-    console.log(data.data.data.response)
     return data.data.data.response.body.items
   }
 
@@ -45,12 +43,22 @@ const GenderContainer = () => {
         <Gender coronaGender={coronaGender} order={order} setOrder={setOrder} />
       ) : (
         <div className="loading">
-          <ReactLoading
-            type={"cubes"}
-            color={"#004CB8"}
-            height={"10%"}
-            width={"6%"}
-          />
+          <Skeleton width={600} height={40} />
+          <Skeleton width={600} height={39} />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <Skeleton width={187} height={207} />
+            <Skeleton width={187} height={207} />
+            <div style={{ width: "32%" }}>
+              <Skeleton width={187} height={100} />
+              <Skeleton width={187} height={100} />
+            </div>
+          </div>
         </div>
       )}
     </div>
