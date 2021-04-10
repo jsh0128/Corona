@@ -27,8 +27,8 @@ const HostipialContainer = () => {
       ) : (
         <div className="loading">
           <Skeleton width={600} height={40} />
-          <Skeleton width={600} height={39} />
-          <Skeleton width={600} height={207} />
+          <Skeleton width={600} height={39} delay={3} />
+          <Skeleton width={600} height={207} delay={5} />
         </div>
       )}
     </div>

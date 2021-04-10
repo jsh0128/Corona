@@ -42,7 +42,7 @@ const MainContainer = () => {
       ) : (
         <div className="loading">
           <Skeleton width={600} height={40} />
-          <Skeleton width={600} height={39} />
+          <Skeleton width={600} height={39} delay={3} />
           <div
             style={{
               display: "flex",
@@ -50,9 +50,9 @@ const MainContainer = () => {
               width: "100%",
             }}
           >
-            <Skeleton width={187} height={207} />
-            <Skeleton width={187} height={207} />
-            <Skeleton width={187} height={207} />
+            <Skeleton width={187} height={207} delay={5} />
+            <Skeleton width={187} height={207} delay={7} />
+            <Skeleton width={187} height={207} delay={9} />
           </div>
         </div>
       )}

@@ -54,9 +54,16 @@ const GenderContainer = () => {
           >
             <Skeleton width={187} height={207} />
             <Skeleton width={187} height={207} />
-            <div style={{ width: "32%" }}>
-              <Skeleton width={187} height={100} />
-              <Skeleton width={187} height={100} />
+            <div
+              style={{
+                width: "32%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <Skeleton width={187} height={93} />
+              <Skeleton width={187} height={93} />
             </div>
           </div>
         </div>
