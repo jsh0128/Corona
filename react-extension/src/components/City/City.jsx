@@ -111,7 +111,7 @@ const City = ({ corona, index, setIndex }) => {
               className="City_bottom_update_img"
               id="Capa_1"
               height="512"
-              viewBox="0 0 512 512"
+              viewBox="0 0 512 450"
               width="512"
               xmlns="http://www.w3.org/2000/svg"
             >

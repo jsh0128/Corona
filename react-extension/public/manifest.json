@@ -11,5 +11,5 @@
     "128": "icons.png"
   },
   "permissions": [],
-  "content_security_policy": "default-src 'self'; object-src 'none'; script-src 'self' 'sha256-A/Iti39Ox/8oIs9L2ZFNP1AMAOVGk9uCOij2XIxco2g='; style-src 'self' 'unsafe-inline'; connect-src http://13.58.35.118:8080/region/infectee http://13.58.35.118:8080/gender/infectee http://13.58.35.118:8080/hostpial "
+  "content_security_policy": "default-src 'self'; object-src 'none'; script-src 'self' 'sha256-AhWEW86zCMybyyirAdPm1esnVzZrlgZ4cKtPURculck='; style-src 'self' 'unsafe-inline'; connect-src http://13.58.35.118:8080/region/infectee http://13.58.35.118:8080/gender/infectee http://13.58.35.118:8080/hostpial "
 }

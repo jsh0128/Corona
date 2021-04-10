@@ -76,6 +76,8 @@
         fill: #a2bef6;
         z-index: 1;
         transform: translate(-50%, -50%);
+        width: 120%;
+        height: 80%;
       }
     }
     &_death {
@@ -140,18 +142,14 @@
       }
       &_img {
         position: absolute;
-        top: 64.5%;
+        top: 59%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        height: 100%;
+        height: 85%;
         fill: #b7dcf1;
         z-index: 1;
       }
     }
   }
-}
-svg {
-  width: 120%;
-  height: 80%;
 }
