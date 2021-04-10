@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import GetApi from "../../assets/api/GetApi"
 import City from "../../components/City"
 import "../../util/util.scss"
-import ReactLoading from "react-loading"
+import Skeleton from "react-loading-skeleton"
 
 const CITY_COUNT = 19
 let all = []
@@ -41,12 +41,19 @@ const MainContainer = () => {
         <City corona={corona} index={index} setIndex={setIndex} />
       ) : (
         <div className="loading">
-          <ReactLoading
-            type={"cubes"}
-            color={"#004CB8"}
-            height={"10%"}
-            width={"6%"}
-          />
+          <Skeleton width={600} height={40} />
+          <Skeleton width={600} height={39} />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <Skeleton width={187} height={207} />
+            <Skeleton width={187} height={207} />
+            <Skeleton width={187} height={207} />
+          </div>
         </div>
       )}
     </div>

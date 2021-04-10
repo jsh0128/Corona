@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import GetApi from "../../assets/api/GetApi"
 import Hostpial from "../../components/Hostpial"
 import ReactLoading from "react-loading"
+import Skeleton from "react-loading-skeleton"
 
 const HostipialContainer = () => {
   const [api, setApi] = useState([])
@@ -15,7 +16,6 @@ const HostipialContainer = () => {
   useEffect(() => {
     getApi().then((response) => {
       setApi(response)
-      console.log(response)
       setLoading(true)
     })
   }, [])
@@ -26,12 +26,9 @@ const HostipialContainer = () => {
         <Hostpial api={api} />
       ) : (
         <div className="loading">
-          <ReactLoading
-            type={"cubes"}
-            color={"#004CB8"}
-            height={"10%"}
-            width={"6%"}
-          />
+          <Skeleton width={600} height={40} />
+          <Skeleton width={600} height={39} />
+          <Skeleton width={600} height={207} />
         </div>
       )}
     </div>
