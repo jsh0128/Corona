@@ -8,22 +8,11 @@ const CITY_COUNT = 19
 let all = []
 
 const MainContainer = () => {
-  const [index, setIndex] = useState(18)
+  const [index, setIndex] = useState(0)
   const [corona, setCorona] = useState([])
-
-  const changeIndex = useCallback((e) => {
-    if (e === "0") {
-      setIndex(18)
-    } else if (e === "18") {
-      setIndex(0)
-    } else {
-      setIndex(e)
-    }
-  }, [])
 
   const getApi = async () => {
     const data = await GetApi.getCity()
-    console.log(data)
     return data.response.body.items
   }
 
@@ -36,8 +25,8 @@ const MainContainer = () => {
         death: response.item[i].deathCnt,
       }
       all = [...all, data]
-      setCorona(all)
     }
+    setCorona(all.reverse())
   }, [])
 
   useEffect(() => {
@@ -49,7 +38,7 @@ const MainContainer = () => {
   return (
     <div>
       {corona.length >= 19 ? (
-        <City corona={corona} index={index} changeIndex={changeIndex} />
+        <City corona={corona} index={index} setIndex={setIndex} />
       ) : (
         <div className="loading">
           <ReactLoading

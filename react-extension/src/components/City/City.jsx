@@ -5,14 +5,14 @@ import ButtonRouter from "../common/Buttonrouter/Buttonrouter"
 import cities from "../../models/cities"
 import "../../util/util.scss"
 
-const City = ({ corona, index, changeIndex }) => {
+const City = ({ corona, index, setIndex }) => {
   return (
     <div className="center">
       <div className="City">
         <div className="City_top">
           <select
             className="City_top_select"
-            onChange={(e) => changeIndex(e.target.value)}
+            onChange={(e) => setIndex(e.target.value)}
           >
             {cities.map((city, i) => (
               <option value={i} key={i}>
@@ -44,11 +44,7 @@ const City = ({ corona, index, changeIndex }) => {
             <svg
               className="City_bottom_check_img"
               id="Capa_1"
-              enable-background="new 0 0 512 512"
-              height="512"
               viewBox="0 0 512 512"
-              width="512"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <g>
                 <path d="m256 112.226c-12.976 0-23.532 10.557-23.532 23.532s10.556 23.532 23.532 23.532 23.532-10.557 23.532-23.532-10.556-23.532-23.532-23.532zm0 32.064c-4.705 0-8.532-3.827-8.532-8.532 0-4.704 3.828-8.532 8.532-8.532s8.532 3.828 8.532 8.532c0 4.705-3.827 8.532-8.532 8.532z" />
@@ -114,7 +110,6 @@ const City = ({ corona, index, changeIndex }) => {
             <svg
               className="City_bottom_update_img"
               id="Capa_1"
-              enable-background="new 0 0 512 512"
               height="512"
               viewBox="0 0 512 512"
               width="512"

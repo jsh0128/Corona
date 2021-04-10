@@ -33,8 +33,8 @@ const Circle = ({
                   strokeWidth={6}
                   styles={{
                     root: {
-                      height: "6rem",
-                      width: "6rem",
+                      height: "7.3rem",
+                      width: "7.3rem",
                     },
                     path: {
                       stroke: pathColor,
