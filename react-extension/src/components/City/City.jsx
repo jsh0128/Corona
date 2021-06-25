@@ -1,5 +1,4 @@
 import React from "react"
-// import PropTypes from "prop-types"
 import "./City.scss"
 import ButtonRouter from "../common/Buttonrouter/Buttonrouter"
 import { ReactComponent as Virus } from "../../assets/images/virus.svg"
