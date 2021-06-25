@@ -23,6 +23,7 @@ const MainContainer = () => {
         check: response.item[i].defCnt,
         update: response.item[i].incDec,
         death: response.item[i].deathCnt,
+        stdDay : response.item[i].stdDay,
       }
       all = [...all, data]
     }

@@ -27,7 +27,7 @@ const City = ({ corona, index, setIndex }) => {
         <div className="text">
           <div className="City_text">
             <span className="City_text_span">
-              {corona[index].area}의 코로나 정보를 표시합니다
+              {corona[index].stdDay} 기준
             </span>
           </div>
           <ButtonRouter
